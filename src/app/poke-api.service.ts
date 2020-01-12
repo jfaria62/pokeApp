@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {Pokemon} from './pokemon';
 
 import 'rxjs/add/operator/toPromise';
-import { map } from 'rxjs/operators';
-import class pokemon;
+import 'rxjs/operators/map';
+import {  } from '@angular/common/';
 
 @Injectable({
   providedIn: 'root'
@@ -17,12 +18,11 @@ export class PokeAPIService {
   // HttpClient request in PokeAPIService constructor
   constructor(private http: HttpClient) { }
 
-  // GET pokemon information
-  getPokemon(offset: number, limit: number) {
-    return this.http.get('${this.baseUrl}?offset=${offset}&limit=${limit}')
-
-    .toPromise()
-    .then(items => map((item, idx) => {
+  // GET pokemon information offset: number, limit: number
+  getPokemon() {
+    return this.http.get<Pokemon>('${this.baseUrl}' + 'pokemon/ditto');
+    /*.toPromise()
+    .then(items => items.isPrototypeOf((item, idx) => {
       const id: number = idx + offset + 1;
 
       return{
@@ -30,6 +30,6 @@ export class PokeAPIService {
         sprite: '${this.baseSpriteUrl}${id}.png',
         id
       };
-    }));
+    }));*/
   }
 }
