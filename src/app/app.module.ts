@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { PokeAPIService } from './poke-api.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import { GameBoardComponent } from './game-board/game-board.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GameBoardComponent
   ],
   imports: [
     BrowserModule,
