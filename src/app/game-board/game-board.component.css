@@ -1,0 +1,36 @@
+table {
+  border-collapse: collapse;
+  text-align: center;
+  margin: auto;
+
+}
+
+table, td{
+  border: 5px solid #E39839;
+  padding: 3%;
+}
+
+tr {
+}
+
+td {
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 20px;
+  height: 80px;
+}
+
+#E1, #E2, #E3 {
+  border-bottom: hidden;
+}
+
+#Q1, #Q2, #Q3 {
+  border-top: hidden;
+}
+
+#Q1, #W1, #E1 {
+  border-left: hidden;
+}
+#Q3, #W3, #E3 {
+  border-right: hidden;
+}

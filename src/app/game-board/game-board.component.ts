@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PokeAPIService } from './poke-api.service';
 import { PokeAPIService } from '../poke-api.service';
 @Component({
   selector: 'app-game-board',
@@ -15,6 +14,6 @@ export class GameBoardComponent implements OnInit {
   }
 
   selectBox(side){
-    this.PokeService.getPokemon(side);
+    this.PokeService.getPokemon();
   }
 }
