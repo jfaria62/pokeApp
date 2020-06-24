@@ -7,11 +7,13 @@ import { PokeAPIService } from './poke-api.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { GameBoardComponent } from './game-board/game-board.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameBoardComponent
+    GameBoardComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,
