@@ -1,1 +1,12 @@
 <p>tabs works!</p>
+<div class="container">
+  <ul class="nav nav-tabs">
+    Player 1
+      <select>
+        <option *ngFor="let num of pokemon" [id]="num">{{num}}</option>
+    </select>
+    Player 2
+    <select></select>
+  </ul>
+ <router-outlet></router-outlet>
+</div>
