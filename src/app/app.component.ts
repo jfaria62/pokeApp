@@ -18,9 +18,6 @@ export class AppComponent implements OnInit {
   activatedRoute: ActivatedRoute;
   pokeService: PokeAPIService;
   values = '';
-  pokeN = '12';
-  // tslint:disable-next-line: no-trailing-whitespace
-
   onKey(event: any) {
     this.values += event.target.values + ' | ';
   }
@@ -36,13 +33,5 @@ export class AppComponent implements OnInit {
         this.pokemons = this.pokeService.getPokemon();
       }
     )
-*/
-    const simpleText = this.pokeService.getPokemon()
-     /* .then(pokemons => {
-        this.pokemonList = pokemons;
-      });*/
-    console.log('LOOK HERE' + simpleText);
-    const pic = document.getElementById('charm');
-    pic.setAttribute('src', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + this.pokeN + '.png');
-  }
+*/}
 }
