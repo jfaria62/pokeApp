@@ -1,12 +1,23 @@
-<p>tabs works!</p>
 <div class="container">
-  <ul class="nav nav-tabs">
+Choose Your Pokemon!
+<ul class="nav nav-tabs">
+  <li>
     Player 1
-      <select>
-        <option *ngFor="let num of pokemon" [id]="num">{{num}}</option>
-    </select>
-    Player 2
-    <select></select>
-  </ul>
- <router-outlet></router-outlet>
+
+  <select (change)="chooseIcon($event.target.value, 1)">
+    <option *ngFor= "let poke of pokeList">{{ poke.name }}</option>
+  </select>
+  Player 2
+  <select (change)="chooseIcon($event.target.value, 2)">
+    <option *ngFor= "let poke of pokeList">{{ poke.name }}</option>
+  </select>
+  </li>
+<li>
+  <img width="150" id="player1" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'>
+  <img width="150" id="player2" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'>
+
+</li>
+</ul>
+  <router-outlet></router-outlet>
 </div>
+
