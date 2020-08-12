@@ -3,6 +3,7 @@ import { Moves } from './moves';
 import { Sprite } from './sprite';
 
 export class Pokemon {
+  results;
   name: string;
   url: string;
   /*
