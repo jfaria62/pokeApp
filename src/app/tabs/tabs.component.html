@@ -1,23 +1,35 @@
-<div class="container">
-Choose Your Pokemon!
-<ul class="nav nav-tabs">
-  <li>
-    Player 1
-
-  <select (change)="chooseIcon($event.target.value, 1)">
-    <option *ngFor= "let poke of pokeList">{{ poke.name }}</option>
-  </select>
-  Player 2
-  <select (change)="chooseIcon($event.target.value, 2)">
-    <option *ngFor= "let poke of pokeList">{{ poke.name }}</option>
-  </select>
-  </li>
-<li>
-  <img width="150" id="player1" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'>
-  <img width="150" id="player2" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'>
-
-</li>
-</ul>
+<table class="table" style="width: 100%;">
+  Choose Your Pokemon!
+  <tr class="nav nav-tabs">
+    <td>
+      Player 1
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+      <select (change)="chooseIcon($event.target.value, 1)">
+        <option *ngFor= "let poke of pokeList">{{ poke.name }}</option>
+      </select>
+      <tr>
+        <img width="150" id="player1" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'>
+      </tr>
+    </td>
+    <td>
+      Player 2
+      <select (change)="chooseIcon($event.target.value, 2)">
+        <option *ngFor= "let poke of pokeList">{{ poke.name }}</option>
+      </select>
+      <tr>
+        <img width="150" id="player2" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'>
+      </tr>
+    </td>
+  </tr>
   <router-outlet></router-outlet>
-</div>
+</table>
 
