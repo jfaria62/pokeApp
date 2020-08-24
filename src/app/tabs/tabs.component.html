@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row ">
+
+    <div class="col">
+      <div ngbDropdown (click)="chooseIcon($event.target.value, 1)" class="d-inline-block">
+        <button  class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Choose a Pokemon</button>
+        <div ngbDropdownMenu class="ngbDropdownMenu overflow-auto" style="max-height: 20em;">
+          <option ngbDropdownItem *ngFor= "let poke of pokeList"> {{ poke.name }}</option>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div ngbDropdown (click)="chooseIcon($event.target.value, 2)" class="d-inline-block">
+        <button  class="btn btn-outline-danger" id="dropdownBasic1" ngbDropdownToggle>Choose a Pokemon</button>
+        <div ngbDropdownMenu class="ngbDropdownMenu overflow-auto" style="max-height: 20em;">
+          <option ngbDropdownItem *ngFor= "let poke of pokeList"> {{ poke.name }}</option>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <img width="150" id="player1" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'>
+    </div>
+
+    <div class="col">
+      <img width="150" id="player2" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
+
