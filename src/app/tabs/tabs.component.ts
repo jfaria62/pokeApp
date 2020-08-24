@@ -1,12 +1,21 @@
-import { Component, OnInit, Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, NgModule } from '@angular/core';
 import {PokeAPIService} from '../poke-api.service';
 import { ActivatedRoute } from '@angular/router';
+import { NgbDropdownModule, NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.css']
 })
+
+@NgModule({
+  imports: [ NgbDropdownModule,
+    NgbDropdownConfig
+
+  ],
+})
+
 
 export class TabsComponent implements OnInit {
   pokeList = [];
