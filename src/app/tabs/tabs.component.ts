@@ -39,6 +39,7 @@ export class TabsComponent implements OnInit {
   fetchIcons() {
     let p1 = this.pokeService.getNumberOne();
     let p2 = this.pokeService.getNumberTwo();
+    // if p1 or p2 return valid, set picture to set icon
     if (p1) {
       this.iconOne.setAttribute('src', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'  + p1 + '.png');
     }
