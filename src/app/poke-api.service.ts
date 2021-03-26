@@ -41,7 +41,7 @@ export class PokeAPIService {
     const pos = this.pokeList.findIndex((char) => {
       return char.name === name;
     });
-    // find which player chose the character
+    // find which player chose the character and assign character number
     if (player === 1) {
       this.playerOne = pos + 1;
     } else {
@@ -53,8 +53,8 @@ export class PokeAPIService {
 
   // Call API for data and set pokeList
   fetchPokemon() {
-    // returns observable object
-    this.http.get<Pokemon>(this.baseUrl + 'pokemon?limit=151').subscribe(
+    // returns observable Pokemon object
+    this.http.get<Pokemon>(this.baseUrl + 'pokemon?limit=250').subscribe(
       (data) => {
         const extractedChars = data.results;
         const chars = extractedChars.map((char) => {
