@@ -1,44 +1,39 @@
-<p>game-board works!</p>
-<table>
-  <tr>
-    <td id="Q1" onclick="selectBox()">
-      <img width="300" id="A1"  >
-    </td>
-    <td id="Q2">
-      Thing 2
-      <img width="300" id="A2">
-    </td>
-    <td id="Q3">
-      <img width="300" id="A3">
-      3
-    </td>
-  </tr>
-  <tr>
-    <td id="W1">
-      Thing 1
-      <img width="300" id="B1" >
-    </td>
-    <td id="W2">
-      Thing 2
-      <img width="300" id="B2">
-    </td>
-    <td id="W3">
-      <img width="300" id="B3">
-      3
-    </td>
-  </tr>
-  <tr>
-    <td id="E1">
-      Thing 1
-      <img width="300" id="C1" >
-    </td>
-    <td id="E2">
-      Thing 2
-      <img width="300" id="C2">
-    </td>
-    <td id="E3">
-      <img width="300" id="C3">
-      3
-    </td>
-  </tr>
-</table>
+<div class="container">
+
+  <div class="h1 text-center warning" id="turn"></div>
+  <table>
+    <tr>
+      <td id="Q1" (click)="selectBox('Q1')">
+        <img width="100" id="A1"  >
+      </td>
+      <td id="Q2" (click)="selectBox('Q2')">
+        <img width="100" id="A2">
+      </td>
+      <td id="Q3" (click)="selectBox('Q3')">
+        <img width="100" id="A3">
+      </td>
+    </tr>
+    <tr>
+      <td id="W1" (click)="selectBox('W1')">
+        <img width="100" id="B1" >
+      </td>
+      <td id="W2"(click)="selectBox('W2')">
+        <img width="100" id="B2">
+      </td>
+      <td id="W3" (click)="selectBox('W3')">
+        <img width="100" id="B3">
+      </td>
+    </tr>
+    <tr>
+      <td id="E1" (click)="selectBox('E1')">
+        <img width="100" id="C1" >
+      </td>
+      <td id="E2" (click)="selectBox('E2')">
+        <img width="100" id="C2">
+      </td>
+      <td id="E3" (click)="selectBox('E3')">
+        <img width="100" id="C3">
+      </td>
+    </tr>
+  </table>
+</div>
